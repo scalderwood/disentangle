@@ -1,4 +1,5 @@
 # disentangle
+[![Build Status](https://travis-ci.org/scalderwood/disentangle.svg?branch=master)](https://travis-ci.org/scalderwood/disentangle)
 This library provides support for writing tests for a lambda-based pattern that reduces coupling between layers (e.g., service layer and DAO layer). For example, a common pattern is the following: 
 ```java
 public class Service {
