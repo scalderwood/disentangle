@@ -11,8 +11,10 @@ before_script:
   - git config user.name "$COMMIT_AUTHOR_NAME"
   - git config user.email "$COMMIT_AUTHOR_EMAIL"
   - export COMMIT_MESSAGE=`git log -1 --oneline`
-
+  - export BRANCH=`git rev-parse --abbrev-ref HEAD`
+  -
 script:
+  - echo $BRANCH
   - echo $COMMIT_MESSAGE
   - jdk_switcher use openjdk8
-  - ./mvnw clean install
+  - ./mvnw clean test
